@@ -7,4 +7,4 @@
 ### `npm test`      - Uruchamia testy
 
 
-### `npm run build` - Buduję wersję produkcyjną do folderu `build/`
+### `npm run build` - Buduje wersję produkcyjną do folderu `build/`
