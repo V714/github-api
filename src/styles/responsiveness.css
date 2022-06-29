@@ -1,0 +1,21 @@
+@media only screen and (min-width: 600px) {
+    .filters{zoom: 1.2;}    
+    .title{zoom: 1.2;}    
+    #search{zoom: 1.2;}    
+    #table{font-size: 26px;line-height: 26px;}
+}
+@media only screen and (min-width: 1000px) {
+    .title{margin-top: 70px !important;zoom: 1.5;}
+    .filters{zoom: 1.5;}    
+    #search{zoom: 1.5;}    
+    #pagination{font-size: 1.8rem !important;line-height: 1.8rem !important;}
+}
+@media only screen and (min-width: 1600px) {
+    .title{margin-top: 40px !important;zoom: 2;}
+    .filters{zoom: 2.0;}    
+    #search{zoom: 2.0;}    
+    #language{line-height: 1rem;}
+    td{font-size: 1.6rem !important;}
+    .td-desc{font-size: 1.2rem !important;line-height: 1.2rem !important;}
+    #table{font-size: 2rem !important;line-height: 2rem !important;}
+}
