@@ -1,21 +1,27 @@
 @media only screen and (min-width: 600px) {
-    .filters{zoom: 1.2;}    
-    .title{zoom: 1.2;}    
-    #search{zoom: 1.2;}    
-    #table{font-size: 26px;line-height: 26px;}
+    #table {font-size: 18px;line-height: 18px;}
+    .td-file {max-width: 100px !important;}
 }
+
 @media only screen and (min-width: 1000px) {
-    .title{margin-top: 70px !important;zoom: 1.5;}
-    .filters{zoom: 1.5;}    
-    #search{zoom: 1.5;}    
-    #pagination{font-size: 1.8rem !important;line-height: 1.8rem !important;}
+    .filter-name,input,select {font-size: 2rem;line-height: 2rem;}
+    #language{line-height: 3rem !important;}
+    input,select {padding: 7px 15px !important;}
+    .select-arrow {top: 40% !important;right: -10px !important;}
+    .select-arrow2 {top: 15% !important;right: 10px !important;}
+    #search {font-size: 2.2rem !important;padding: 20px 35px !important;}
+    .title {margin-top: 70px !important;font-size: 3rem !important;}
+    #pagination {font-size: 1.8rem !important;line-height: 1.8rem !important;}
+    .right-arrow,.left-arrow {margin-inline: 10px !important;padding: 4px 5px !important;}
+    .td-file {max-width: 200px !important;font-size: 1.6rem;}
+    .user-button{font-size: 1.6rem;}
+    .td-desc{font-size: 1.2rem !important;}
 }
+
 @media only screen and (min-width: 1600px) {
-    .title{margin-top: 40px !important;zoom: 2;}
-    .filters{zoom: 2.0;}    
-    #search{zoom: 2.0;}    
-    #language{line-height: 1rem;}
-    td{font-size: 1.6rem !important;}
-    .td-desc{font-size: 1.2rem !important;line-height: 1.2rem !important;}
-    #table{font-size: 2rem !important;line-height: 2rem !important;}
+    .title {margin-top: 80px !important;}
+    #language {line-height: 3rem;}
+    td { font-size: 1.7rem !important;}
+    .td-desc {font-size: 1.3rem !important;line-height: 1.3rem !important;}
+    #table {font-size: 2rem !important;line-height: 2rem !important;}
 }

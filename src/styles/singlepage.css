@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100vw;
 }
 
 .filters {
@@ -46,7 +47,6 @@ select {
     width: 80%;
     background-color: #dcdcdc;
     border-radius: 5px;
-    height: 15px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -92,7 +92,7 @@ select:focus {
     padding: 30px 30px;
     font-size: 1.4rem;
     line-height: 1.4rem;
-    width: 100vw;
+    width: 75vw;
     max-width: 1000px;
     transition: 0.2s all ease-in-out;
 }
@@ -125,7 +125,9 @@ td:hover {
 
 .td-file {
     color: #1FCFC4;
+    max-width: 70px;
 }
+
 
 .td-desc {
     font-size: 1rem;
@@ -168,9 +170,13 @@ td:hover {
 }
 
 .file-button {
+    display: block;
     background-color: #1FCFC422;
-    padding: 5px 15px;
+    padding: 5px 5px;
     border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .file-button:hover {
@@ -180,6 +186,7 @@ td:hover {
 
 #language {
     min-width: 65px;
+    line-height: 1.5rem;
 }
 
 #pagination {
@@ -187,8 +194,8 @@ td:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
 }
 
 .perPage-select {
@@ -220,7 +227,7 @@ td:hover {
 
 .select-arrow2 {
     position: absolute;
-    top: 5%;
+    top: 33%;
     right: 5px;
     pointer-events: none;
 }
@@ -238,8 +245,8 @@ td:hover {
 
 .left-arrow {
     transform: rotate(90deg);
-    padding: 0px 7px;
-    margin-inline: 10px;
+    padding: 0px 4px;
+    margin-inline: 5px;
     background-color: #eee;
     border-radius: 10px;
     height: 30px;
@@ -255,8 +262,8 @@ td:hover {
 .right-arrow {
     transform: rotate(-90deg);
     height: 30px;
-    padding: 0px 7px;
-    margin-inline: 10px;
+    padding: 0px 4px;
+    margin-inline: 5px;
     background-color: #eee;
     border-radius: 10px;
     opacity: 0.7;
