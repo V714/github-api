@@ -1,0 +1,32 @@
+{
+  "total_count": 1,
+  "incomplete_results": false,
+  "items": [
+    {
+      "name": "server.js",
+      "html_url": "https://github.com/V714/RPi-Home/blob/eb49293c8e30a53ed199ae812d6788234999a6f9/server.js",
+      "repository": {
+        "owner": {
+          "login": "V714",
+          "avatar_url": "https://avatars.githubusercontent.com/u/39555713?v=4"
+        },
+        "html_url": "https://github.com/V714/RPi-Home",
+        "description": "Intelligent Home Project"
+      },
+      "score": 1.0
+    },
+    {
+      "name": "index.js",
+      "html_url": "https://github.com/V714/RPi-Home/blob/eb49293c8e30a53ed199ae812d6788234999a6f9/rpihomeserver/src/api/index.js",
+      "repository": {
+        "owner": {
+          "login": "V714",
+          "avatar_url": "https://avatars.githubusercontent.com/u/39555713?v=4"
+        },
+        "html_url": "https://github.com/V714/RPi-Home",
+        "description": "Intelligent Home Project"
+      },
+      "score": 1.0
+    }
+  ]
+}

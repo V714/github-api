@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Modal from 'react-modal';
 import { listElement } from "../interfaces/interfaces";
 
-Modal.setAppElement('#root');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
 
 interface Props {
     user: listElement,

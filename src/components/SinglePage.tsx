@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getData } from "../functions/api";
-import queryString from "query-string"
-import "../styles/singlepage.css"
+import queryString from "query-string";
+import "../styles/singlepage.css";
 import Table from "./Table";
 import { TableDataTypes, Pagination } from "../components/interfaces/interfaces"
-import { URLSearchParams } from "url";
 
 enum Status {
     Idle,
@@ -14,7 +13,7 @@ enum Status {
     Limit
 }
 
-const statusSets: {[key in Status]:{color:string,message:string}} = {
+const statusSets: { [ key in Status ] : { color:string , message:string } } = {
     [Status.Idle]:{color:'#000',message:"wpisz dane"},
     [Status.Loading]:{color:'#aaa',message:"oczekiwanie..."},
     [Status.Loaded]:{color:'#000',message:"brak wyników..."},
@@ -51,8 +50,10 @@ const SinglePage: React.FC = () => {
 
     const submit = (e:React.FormEvent) => {
         e.preventDefault()
-        window.history.replaceState(null,'',`/?username=${userName}&phrase=${phrase}&lang=${language}&page=${pagination.page}&perPage=${pagination.perPage}`)
-        requestData()
+        if(userName&&phrase){
+            window.history.replaceState(null,'',`/?username=${userName}&phrase=${phrase}&lang=${language}&page=${pagination.page}&perPage=${pagination.perPage}`)
+            requestData()
+        }
     }
 
     const requestData = async () => {
@@ -88,13 +89,14 @@ const SinglePage: React.FC = () => {
                 <div className="filters">
                     <div className="filter">
                         <div className="filter-name">Wyszukiwana fraza <p title="Wymagane" > *</p></div>
-                        <input required placeholder="wyszukiwana fraza" value={phrase} onChange={(e)=>setPhrase(e.target.value)}/>
+                        <input name="phrase" role="textbox" required placeholder="wyszukiwana fraza" value={phrase} onChange={(e)=>setPhrase(e.target.value)}/>
                     </div>
                     <div className="filter">
                         <div className="filter-name">Nazwa użytkownika <p title="Wymagane" > *</p></div>
-                        <input required placeholder="nazwa użytkownika" value={userName} onChange={(e)=>setUserName(e.target.value)}/>
+                        <input name="username" role="textbox" required placeholder="nazwa użytkownika" value={userName} onChange={(e)=>setUserName(e.target.value)}/>
                     </div>
-                    <div className="filter">
+                    <div className="filter
+                    ">
                         <div className="filter-name">Język</div>
                         <div className="select">
                             <select value={language} name="language" id="language" onChange={(e) => setLanguage(e.target.value)}>
@@ -115,7 +117,6 @@ const SinglePage: React.FC = () => {
                     <Table data={tableData} pagination={pagination} goToPage={goToPage} changePerPage={changePerPage}/>
                 }
             </div>
-            <div id="copyright">by Tomasz Lipczyński <br/> github.com/V714</div>
         </>
     )
 }
