@@ -69,15 +69,15 @@ export const Table: React.FC<Props> = (props) => {
                             <option value={30}>30</option>
                             <option value={50}>50</option>
                         </select>
-                        <span className="select-arrow2"><img src="./images/arrow.svg"/></span>
+                        <span className="select-arrow2"><img alt="arrow" src="./images/arrow.svg"/></span>
                     </div>
                     <div className="pagination-text">na stronie.</div>
                 </div>
             {props.data.total_count>props.pagination.perPage?<div className="right-pagination">
                 <button className="five" onClick={()=>props.goToPage(props.pagination.page-5)}>-5</button>
-                <button className="left-arrow" onClick={()=>props.goToPage(props.pagination.page-1)}><img src="./images/arrow.svg"/></button>
+                <button className="left-arrow" onClick={()=>props.goToPage(props.pagination.page-1)}><img src="./images/arrow.svg" alt="arrow"/></button>
                 {props.pagination.page}
-                <button className="right-arrow" onClick={()=>props.goToPage(props.pagination.page+1)}><img src="./images/arrow.svg"/></button>
+                <button className="right-arrow" onClick={()=>props.goToPage(props.pagination.page+1)}><img src="./images/arrow.svg" alt="arrow"/></button>
                 <button className="five" onClick={()=>props.goToPage(props.pagination.page+5)}>+5</button>
                 {' z '+ Math.ceil(props.data.total_count / props.pagination.perPage).toString() + ' stron'}
             </div>:<>brak kolejnych stron</>}

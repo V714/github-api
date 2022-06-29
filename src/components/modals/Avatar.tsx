@@ -39,7 +39,7 @@ export const Avatar: React.FC<Props> = (props) => {
             >
                 <div className="modal">
                     <div className="modal-title">{props.user.username}</div>
-                    <img className="modal-photo" src={props.user.avatar}/>
+                    <img className="modal-photo" alt="user photo" src={props.user.avatar}/>
                     <button className="modal-button" onClick={props.closeModal}>zamknij</button>
                 </div>
             </Modal>

@@ -104,7 +104,7 @@ const SinglePage: React.FC = () => {
                                 <option value="java">Java</option>
                                 <option value="js">JavaScript</option>
                             </select>
-                            <span className="select-arrow"><img src="./images/arrow.svg"/></span>
+                            <span className="select-arrow"><img alt="arrow" src="./images/arrow.svg"/></span>
                         </div>
                     </div>
                 </div>
