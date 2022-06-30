@@ -51,8 +51,7 @@ const SinglePage: React.FC = () => {
     const submit = (e:React.FormEvent) => {
         e.preventDefault()
         if(userName&&phrase){
-            window.history.replaceState(null,'',`/?username=${userName}&phrase=${phrase}&lang=${language}&page=${pagination.page}&perPage=${pagination.perPage}`)
-            requestData()
+            setPagination({...pagination, page:1})
         }
     }
 
