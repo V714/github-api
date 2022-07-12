@@ -12,13 +12,13 @@ jest.mock("../components/Table", () => {
 
 describe("renders filters correctly", () => {
   render(<SinglePage />);
-  const phrase= screen.getByPlaceholderText("wyszukiwana fraza")
-  const user = screen.getByPlaceholderText("nazwa użytkownika")
-  const searchButton = screen.getByText("wyszukaj")
+  const phrase= screen.getByPlaceholderText("Phrase")
+  const user = screen.getByPlaceholderText("Username")
+  const searchButton = screen.getByText("search")
   
   it('renders title correctly', () =>{ 
     expect(
-      screen.getByText("Wyszukaj frazę w repozytorium GitHub")
+      screen.getByText("Find a phrase in GitHub repository")
     ).toBeInTheDocument();
   })
   

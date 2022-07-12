@@ -14,11 +14,11 @@ enum Status {
 }
 
 const statusSets: { [ key in Status ] : { color:string , message:string } } = {
-    [Status.Idle]:{color:'#000',message:"wpisz dane"},
-    [Status.Loading]:{color:'#aaa',message:"oczekiwanie..."},
-    [Status.Loaded]:{color:'#000',message:"brak wyników..."},
-    [Status.Error]:{color:'#e00',message:"wystąpił błąd"},
-    [Status.Limit]:{color:'#e00',message:"przekroczono limit zapytań..."},
+    [Status.Idle]:{color:'#000',message:"enter the data"},
+    [Status.Loading]:{color:'#aaa',message:"waiting..."},
+    [Status.Loaded]:{color:'#000',message:"no results..."},
+    [Status.Error]:{color:'#e00',message:"error"},
+    [Status.Limit]:{color:'#e00',message:"requests limit exceeded..."},
 }
 
 const SinglePage: React.FC = () => {
@@ -59,7 +59,6 @@ const SinglePage: React.FC = () => {
         setStatus(Status.Loading)
         setTableData({...tableData, total_count: 0})
         const response = await getData(userName,phrase,language,pagination)
-        console.log(response)
         if(response.code){
             if(response.code==='ERR_BAD_REQUEST'){
                 setStatus(Status.Limit)
@@ -83,20 +82,20 @@ const SinglePage: React.FC = () => {
 
     return(
         <>
-            <h1 className="title">Wyszukaj frazę w repozytorium GitHub</h1>
+            <h1 className="title">Find a phrase in GitHub repository</h1>
             <form id="form_gh" onSubmit={(e)=>submit(e)}>
                 <div className="filters">
                     <div className="filter">
-                        <div className="filter-name">Wyszukiwana fraza <p title="Wymagane" > *</p></div>
-                        <input name="phrase" role="textbox" required placeholder="wyszukiwana fraza" value={phrase} onChange={(e)=>setPhrase(e.target.value)}/>
+                        <div className="filter-name">Phrase<p title="Wymagane" > *</p></div>
+                        <input name="phrase" role="textbox" required placeholder="phrase" value={phrase} onChange={(e)=>setPhrase(e.target.value)}/>
                     </div>
                     <div className="filter">
-                        <div className="filter-name">Nazwa użytkownika <p title="Wymagane" > *</p></div>
-                        <input name="username" role="textbox" required placeholder="nazwa użytkownika" value={userName} onChange={(e)=>setUserName(e.target.value)}/>
+                        <div className="filter-name">Username <p title="Required" > *</p></div>
+                        <input name="username" role="textbox" required placeholder="Username" value={userName} onChange={(e)=>setUserName(e.target.value)}/>
                     </div>
                     <div className="filter
                     ">
-                        <div className="filter-name">Język</div>
+                        <div className="filter-name">Language</div>
                         <div className="select">
                             <select value={language} name="language" id="language" onChange={(e) => setLanguage(e.target.value)}>
                                 <option value="go">Go</option>
@@ -107,7 +106,7 @@ const SinglePage: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <button id="search" type="submit">wyszukaj</button>
+                <button id="search" type="submit">search</button>
             </form>
             <div className="table">
                 {   tableData.total_count===0 ?

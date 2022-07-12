@@ -43,9 +43,9 @@ export const Table: React.FC<Props> = (props) => {
         <>
             <table id="table"> 
                 <tr>
-                    <th className="th-file">Nazwa Pliku</th>
-                    <th className="th-desc">Opis Repozytorium</th>
-                    <th className="th-user">Użytkownik</th>
+                    <th className="th-file">Filename</th>
+                    <th className="th-desc">Repository description</th>
+                    <th className="th-user">Username</th>
                 </tr>
                 {list && list.map((item,key)=>{
                     return(
@@ -60,7 +60,7 @@ export const Table: React.FC<Props> = (props) => {
         
             <div id="pagination">
                 <div className="left-pagination">
-                    <div className="pagination-text">Pokaż</div> 
+                    <div className="pagination-text">Show</div> 
                     
                     <div className="select">
                         <select defaultValue={15} className="perPage-select" value={props.pagination.perPage} onChange={(e)=>props.changePerPage(parseInt(e.target.value))}>
@@ -71,7 +71,7 @@ export const Table: React.FC<Props> = (props) => {
                         </select>
                         <span className="select-arrow2"><img alt="arrow" src="./images/arrow.svg"/></span>
                     </div>
-                    <div className="pagination-text">na stronie.</div>
+                    <div className="pagination-text">per page.</div>
                 </div>
             {props.data.total_count>props.pagination.perPage?<div className="right-pagination">
                 <button className="five" onClick={()=>props.goToPage(props.pagination.page-5)}>-5</button>
@@ -80,7 +80,7 @@ export const Table: React.FC<Props> = (props) => {
                 <button className="right-arrow" onClick={()=>props.goToPage(props.pagination.page+1)}><img src="./images/arrow.svg" alt="arrow"/></button>
                 <button className="five" onClick={()=>props.goToPage(props.pagination.page+5)}>+5</button>
                 {' z '+ Math.ceil(props.data.total_count / props.pagination.perPage).toString() + ' stron'}
-            </div>:<>brak kolejnych stron</>}
+            </div>:<>no more pages</>}
         </div>
 
 
