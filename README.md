@@ -1,10 +1,9 @@
 
-## Dostępne skrypty
 
-### `npm start`     - Uruchamia aplikacje w trybie deweloperskim na `localhost:3000`
-
-
-### `npm test`      - Uruchamia testy
+### `npm start`     - to start the App
 
 
-### `npm run build` - Buduje wersję produkcyjną do folderu `build/`
+### `npm test`      - to run tests
+
+
+### `npm run build` - to build the production version
